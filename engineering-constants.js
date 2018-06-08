@@ -1191,6 +1191,8 @@ export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
   .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
+  .range(['#2ec732', '#baf55d', '#879a21', '#78f3cb'])
+  .range(['#F2BF5B', '#E25479', '#7EC5EE', '#78DA90'])
 
 export const titles = [
   {label: 'Associate Software Engineer', minPoints: 0, maxPoints: 16},
