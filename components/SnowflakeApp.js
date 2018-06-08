@@ -50,8 +50,8 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     title: '',
     milestoneByTrack: {
-      'MOBILE': 0,
-      'WEB_CLIENT': 0,
+      'GAME_DEVELOPMENT': 0,
+      'CLIENT': 0,
       'FOUNDATIONS': 0,
       'SERVERS': 0,
       'PROJECT_MANAGEMENT': 0,
@@ -60,24 +60,24 @@ const emptyState = (): SnowflakeAppState => {
       'INITIATIVE': 0,
       'CAREER_DEVELOPMENT': 0,
       'ORG_DESIGN': 0,
-      'WELLBEING': 0,
+      'TEAM_HEALTH': 0,
       'ACCOMPLISHMENT': 0,
       'MENTORSHIP': 0,
       'EVANGELISM': 0,
       'RECRUITING': 0,
       'COMMUNITY': 0
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'GAME_DEVELOPMENT'
   }
 }
 
 const defaultState = (): SnowflakeAppState => {
   return {
     name: 'Cersei Lannister',
-    title: 'Staff Engineer',
+    title: 'Senior Software Engineer',
     milestoneByTrack: {
-      'MOBILE': 1,
-      'WEB_CLIENT': 2,
+      'GAME_DEVELOPMENT': 1,
+      'CLIENT': 2,
       'FOUNDATIONS': 3,
       'SERVERS': 2,
       'PROJECT_MANAGEMENT': 4,
@@ -86,14 +86,14 @@ const defaultState = (): SnowflakeAppState => {
       'INITIATIVE': 4,
       'CAREER_DEVELOPMENT': 3,
       'ORG_DESIGN': 2,
-      'WELLBEING': 0,
+      'TEAM_HEALTH': 0,
       'ACCOMPLISHMENT': 4,
       'MENTORSHIP': 2,
       'EVANGELISM': 2,
       'RECRUITING': 3,
       'COMMUNITY': 0
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'GAME_DEVELOPMENT'
   }
 }
 
@@ -151,14 +151,14 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             outline: 0;
           }
           a {
-            color: #888;
+            color: #a1bfa3;
             text-decoration: none;
           }
         `}</style>
-        <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
-            <Wordmark />
-          </a>
+        <div style={{margin: '19px auto 0', width: '100%'}}>
+          <a href="https://moonfrog.com/" target="_blank">
+          	<h1>Moonfrog Engineering: Growth Framework</h1>
+		  </a>
         </div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>

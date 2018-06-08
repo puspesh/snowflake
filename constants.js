@@ -1,15 +1,15 @@
 // @flow
 import * as d3 from 'd3'
 
-export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
+export type TrackId = 'GAME_DEVELOPMENT' | 'CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
-  'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
+  'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'TEAM_HEALTH' | 'ACCOMPLISHMENT' |
   'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
-  'MOBILE': Milestone,
-  'WEB_CLIENT': Milestone,
+  'GAME_DEVELOPMENT': Milestone,
+  'CLIENT': Milestone,
   'FOUNDATIONS': Milestone,
   'SERVERS': Milestone,
   'PROJECT_MANAGEMENT': Milestone,
@@ -18,7 +18,7 @@ export type MilestoneMap = {
   'INITIATIVE': Milestone,
   'CAREER_DEVELOPMENT': Milestone,
   'ORG_DESIGN': Milestone,
-  'WELLBEING': Milestone,
+  'TEAM_HEALTH': Milestone,
   'ACCOMPLISHMENT': Milestone,
   'MENTORSHIP': Milestone,
   'EVANGELISM': Milestone,
@@ -71,8 +71,8 @@ export type Track = {
 }
 
 type Tracks = {|
-  'MOBILE': Track,
-  'WEB_CLIENT': Track,
+  'GAME_DEVELOPMENT': Track,
+  'CLIENT': Track,
   'FOUNDATIONS': Track,
   'SERVERS': Track,
   'PROJECT_MANAGEMENT': Track,
@@ -81,7 +81,7 @@ type Tracks = {|
   'INITIATIVE': Track,
   'CAREER_DEVELOPMENT': Track,
   'ORG_DESIGN': Track,
-  'WELLBEING': Track,
+  'TEAM_HEALTH': Track,
   'ACCOMPLISHMENT': Track,
   'MENTORSHIP': Track,
   'EVANGELISM': Track,
@@ -90,112 +90,112 @@ type Tracks = {|
 |}
 
 export const tracks: Tracks = {
-  "MOBILE": {
-    "displayName": "Mobile",
+  "GAME_DEVELOPMENT": {
+    "displayName": "Game Development",
     "category": "A",
-    "description": "Develops expertise in native mobile platform engineering, such as iOS or Android",
+    "description": "Develops expertise in developing game logic and features supporting business usecacses keeping user experience in mind",
     "milestones": [{
-      "summary": "Works effectively within established iOS or Android architectures, following current best practices",
+      "summary": "Works effectively within established game architectures and develops small features independently	",
       "signals": [
-        "Delivers features requiring simple local modifications",
-        "Adds simple actions that call server endpoints",
-        "Reuses existing components appropriately",
+        "Delivers small features independently",
+        "Adds simple API and is able to integrate it on game side",
+        "Reuses existing components appropriately", 
       ],
       "examples": [
-        "Added existing button to a different iOS surface",
-        "Add follow button for publications on Android",
-        "Fetched and displayed a new stream, using existing stream item styles",
+        "Added existing functionality to a different scene or userflow",
+        "Add new push notification to ios and/or android ",
+		"Delivered a player profile feature with popups",
       ],
     }, {
-      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "summary": "Develops new small-med features from scratch or minor improvements to existing features/codeflows	",
       "signals": [
-        "Defines new useful and appropriate proto-generated objects",
+        "Defines new userflow and required changes to existing feature classes ",
         "Creates simple new activities on Android",
         "Migrates code from old patterns to new patterns",
       ],
       "examples": [
-        "Upgraded SDWebImage to a new major version",
-        "Added support for rendering a new type of stream item",
+        "Upgraded FacebookSDK to a new major version",
+        "Able to integrate a completely new CCB/CCS file in user flow",
         "Prototyped a simple new feature quickly",
       ],
     }, {
-      "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+      "summary": "Designs major new features and demonstrates a nuanced understanding of game constraints",
       "signals": [
         "Implements complex features with a large product surface area",
-        "Works effectively with  Android reactive programming framework",
+        "Works effectively with Cocos engine ", 
         "Adds support for new iOS features after a major iOS version upgrade",
       ],
       "examples": [
-        "Designed iOS caching strategy for offline reading",
-        "Built series reader on Android",
+        "Designed and implemented one new game mode in TPG",
+        "Designed simulations for poker hand strength meter ", 
         "Informed the team about recent best practice changes and deprecations",
       ],
     }, {
-      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+      "summary": "Builds complex, reusable game features that pioneer best practices and enable engineers to work more effectively",
       "signals": [
-        "Pioneers architecture migration strategies that reduce programmer burden",
+        "Designed new and highly reusable feature development framework",
         "Fixes subtle memory management issues",
-        "Implements interactive dismissals that bring delight",
+        "Implements interactive upgrades which bring user-delight", 
       ],
       "examples": [
-        "Upgraded CocoaPods to a new major version",
-        "Designed architecture for fetching and rendering stream items",
-        "Migrated Android persistance layer to reactive programming",
+        "Upgraded cocos and other libraries to a new major version", 
+        "Designed and implemented new framework which can support multiple modes", 
+        "Refactored from inline action handling in UI to event based", 
       ],
     }, {
       "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
       "signals": [
-        "Defines long-term goals and ensures active projects are in service of them",
+        "Defines long-term goals and ensures improvements are actively being done", 
         "Designs and builds innovative, industry-leading UI interactions",
-        "Invents new techniques to responsibly stretch limits of the Android platform",
+        "Invents new techniques to responsibly stretch limits of the cocos platform", 
       ],
       "examples": [
         "Defined and drove complete migration plan to Swift or Kotlin",
-        "Implemented Android recycler views before platform support existed",
+        "Implemented new game engine which can power family of games effectively ", 
         "Pioneered application-level abstractions for multi-app environment",
       ],
     }],
   },
 
-  "WEB_CLIENT": {
-    "displayName": "Web client",
+  "CLIENT": {
+    "displayName": "Client Engineering",
     "category": "A",
-    "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
+    "description": "Develops expertise in native mobile platform engineering, such as cocos (android, ios, web/html5)",
     "milestones": [{
-      "summary": "Works effectively within established web client architectures, following current best practices",
+      "summary": "Works effectively within established game engine (cocos) architectures, following current best practices",
       "signals": [
         "Makes minor modifications to existing screens",
         "Fixes simple design quality issues",
-        "Uses CSS appropriately, following style guide",
+        "Uses CCB/CCS appropriately, following performance guidelines",
       ],
       "examples": [
-        "Implemented sticky footer on the post page",
-        "Hooked up the action to dismiss a post from a stream",
-        "Built PaymentHistory screen using ResponseScreen",
+        "Implemented sticky HUD layer on all the scenes during gameplay and handled updates", 
+        "Hooked up the action to consume events being thrown in UI", 
+        "Used CCScrollLayer as per the design requirement",
       ],
     }, {
-      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture", 
       "signals": [
         "Makes sensible abstractions based on template and code patterns",
         "Specs and builds interactive components independently",
         "Prototypes simple new features quickly",
       ],
       "examples": [
-        "Built credit card input component",
+        "Built CustomScrollLayer as per the design requirement",
         "Created shared buttons template",
-        "Built modal system",
+        "Built  generic modal system",
       ],
     }, {
-      "summary": "Designs major new features and demonstrates a nuanced understanding of browser constraints",
+      "summary": "Designs major new features and demonstrates a nuanced understanding of platform constraints (android/ios/html5)", 
       "signals": [
         "Provides useful design feedback and suggests feasible alternatives",
         "Performs systemic tasks to significantly minimise bundle size",
-        "Acts a caretaker for all of web client code",
+        "Acts a caretaker for all of client code",
       ],
       "examples": [
-        "Designed font loading strategy for Medium",
-        "Researched utility of service workers for Medium",
-        "Designed and implemented ResponseScreen",
+        "Designed font loading strategy for Moonfrog",
+        "Helped identify memory leaks while retain/release and fixed it in a generic way",
+        "Designed and implemented generic new UI component",
       ],
     }, {
       "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
@@ -205,64 +205,64 @@ export const tracks: Tracks = {
         "Makes architectural decisions that eliminate entire classes of bugs",
       ],
       "examples": [
-        "Designed Medium's post morpher and delta system",
-        "Implemented Medium's scrolling text over image blur",
-        "Designed and pioneered proto-based model storage",
+        "Designed Asset management strategy for low end phones",
+        "Implemented Moonfrog's scrolling text over image blur",
+        "Designed and pioneered proto-based cross-platform local storage",
       ],
     }, {
-      "summary": "Is an industry-leading expert in web client or sets strategic web client direction for an eng team",
+      "summary": "Is an industry-leading expert in client optimization or sets strategic client development direction for an eng team", 
       "signals": [
-        "Invents new techniques to innovate and overcome browser constraints",
+        "Invents new techniques to innovate and overcome device constraints",
         "Identifies and solved systemic problems with current architecture",
         "Defines a long-term vision for web client and ensures projects are in service of it",
       ],
       "examples": [
-        "Invented CSS in JS",
-        "Defined and drove migration strategy to Lite",
-        "Implemented unidirectional data flow to completion",
+        "Invented new UI builder tool",
+        "Defined and drove migration strategy to Lua/JS based game logic separation",
+        "Improved performance to increase device coverage and future compatibiltiy",
       ],
     }],
   },
 
   "FOUNDATIONS": {
-    "displayName": "Foundations",
+    "displayName": "System/Ops",
     "category": "A",
-    "description": "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
+    "description": "Develops expertise in foundational systems, such as system-ops, deployments, pipelines, databases and distributed computing",
     "milestones": [{
-      "summary": "Works effectively within established structures, following current best practices",
+      "summary": "Works effectively within established structures, following current best practices, able to deal with production environment",
       "signals": [
-        "Writes thorough postmortems for service outages",
-        "Makes simple configuration changes to services",
-        "Performs backfills safely and effectively, without causing pages",
+        "Writes thorough RCAs for service outages",
+        "Made safe and effective Script changes",
+        "Performs basic debugging on production machines ",
       ],
       "examples": [
-        "Made safe and effective Ansible changes",
-        "Implemented new ETL pipelines based on existing ones",
+		"Makes simple configuration changes to services like ZK",
+        "Implemented new consumer jobs based on existing ones",
         "Resolved out of disk errors independently",
       ],
     }, {
-      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "summary": "Able to contribute effectively in ops issues and/or suggest minor improvements to existing architecture",
       "signals": [
-        "Made minor version upgrades to technologies",
-        "Builds machine learning jobs within the ML framework",
-        "Triages service issues correctly and independently",
+        "Made minor version upgrades to technologies on prod environment",
+        "Able to debug a prod on-call issue effectively", 
+        "Triages service/system issues correctly and independently", 
       ],
       "examples": [
-        "Upgraded NodeJS from 8.0 to 8.1.1",
-        "Built custom packages for RPMs",
-        "Improved ETL efficiency by improving Dynamo to S3 loading",
+        "Upgraded NodeJS from 8.0 to 9.1.1",
+        "Built custom npm packages",
+        "Identified cause of increased latency between two services", 
       ],
     }, {
-      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "summary": "Contributes in system level changes, pre-emptively improve perofrmance issues in applications ",
       "signals": [
         "Acts as primary maintainer for existing critical systems",
         "Designs moderately complex systems",
-        "Makes major version upgrades to libraries",
+        "Makes major version upgrades to libraries before time",
       ],
       "examples": [
-        "Designed Ansible configuration management",
-        "Built Medium's realtime stats pipeline",
-        "Designed flexible framework for writing machine learning jobs",
+        "Designed observability steps for certain application(s)",
+        "Built Moonfrog's realtime stats pipeline",
+        "Designed flexible framework for writing asynchoronous jobs to update user blobs"
       ],
     }, {
       "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
@@ -285,7 +285,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Invented a novel ML technique that advanced the state of the art",
-        "Defined and developed Medium's continuous delivery strategy",
+        "Defined and developed Moonfrog's continuous delivery strategy",
         "Developed and implemented HA strategy",
       ],
     }],
@@ -294,28 +294,28 @@ export const tracks: Tracks = {
   "SERVERS": {
     "displayName": "Servers",
     "category": "A",
-    "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
+    "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, C++",
     "milestones": [{
-      "summary": "Works effectively within established server side frameworks, following current best practices",
+      "summary": "Works effectively within established server side frameworks, following current best practices, develops small features independently", 
       "signals": [
-        "Adds NodeJS endpoints using layers architecture",
-        "Adds golang endpoints using Gotham architecture",
+        "Adds NodeJS endpoints to userserver APIs ",
+        "Adds new packet flows to Gameserver websocket flows",
         "Makes minor server changes to support client needs",
       ],
       "examples": [
-        "Added IFTTT trigger for new bookmark to medium2",
-        "Added delete audio route to Buggle",
-        "Queried a Dynamo LSI appropriately",
+        "Able to integrate with a new npm/sdk",
+        "Added new Admin tool functionality",
+        "Able to work with databases like mongo and couchbase",
       ],
     }, {
-      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "summary": "Develops new small-med features from scratch or minor improvements to existing features/codeflows	",
       "signals": [
         "Assesses correctness and utility of existing code and avoids blind copy-pasting",
         "Generalizes code when appropriate",
         "Determines data needs from product requirements",
       ],
       "examples": [
-        "Identified need for new index on Dynamo",
+        "Identified need for new index on Mongo/Couchbase",
         "Acted as caretaker for routes protos",
         "Updated Facebook API version and codebase dependencies",
       ],
@@ -327,9 +327,9 @@ export const tracks: Tracks = {
         "Writes playbooks for new service maintenance",
       ],
       "examples": [
-        "Implemented Google Auth login to Medium",
-        "Implemented payments integration with Stripe",
-        "Built Textshots server",
+        "Implemented Google Auth login to Moonfrog internal systems",
+        "Implemented payments integration with new Payment gateway",
+        "Built new service in Golang working with existing systems in harmony",
       ],
     }, {
       "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
@@ -339,7 +339,7 @@ export const tracks: Tracks = {
         "Makes appropriate buy vs build choices",
       ],
       "examples": [
-        "Designed Medium's ranked feed architecture",
+		"Designed Moonfrog's quest system architecture",
         "Designed custom domains architecture",
         "Created Gotham framework for creating Go services",
       ],
@@ -351,8 +351,8 @@ export const tracks: Tracks = {
         "Identifies and solves systemic problems with current architecture",
       ],
       "examples": [
-        "Researched, vetted, and selected Go as Medium's statically typed language",
-        "Defined microservices architecture and medium2 migration plan",
+        "Researched, vetted, and selected Go as Moonfrog's statically typed language",
+        "Defined microservices architecture and Moonfrog's migration plan",
         "Defined and implemented proprietary IP core to the company's success",
       ],
     }],
@@ -474,7 +474,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Lead off-site workshop on interviewing",
-        "Wrote Medium's growth framework and rationale",
+        "Wrote Moonfrog's growth framework and rationale",
         "Aligned the entire organization around claps",
       ],
     }, {
@@ -541,7 +541,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Added code coverage reporting to iOS CI pipeline",
-        "Iterated repeatedly to develop Medium's underlines solution",
+        "Iterated repeatedly to develop Moonfrog's underlines solution",
         "Defined and oversaw plan for closing Heartbleed vulnerability",
       ],
     }, {
@@ -620,8 +620,8 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Migrated the organization from Holacracy",
-        "Built Medium Android prototype and convinced execs to fund it",
-        "Convinced leadership and engineering org to move to Medium Lite architecture",
+        "Built Moonfrog Android prototype and convinced execs to fund it",
+        "Convinced leadership and engineering org to move to Moonfrog Lite architecture",
       ],
     }],
   },
@@ -760,8 +760,8 @@ export const tracks: Tracks = {
     }],
   },
 
-  "WELLBEING": {
-    "displayName": "Wellbeing",
+  "TEAM_HEALTH": {
+    "displayName": "Team Health",
     "category": "C",
     "description": "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
     "milestones": [{
@@ -923,7 +923,7 @@ export const tracks: Tracks = {
         "Lead from behind to support someone new to a leadership role",
       ],
     }, {
-      "summary": "Teaches small groups of engineers and contributes to Medium's shared knowledge base",
+      "summary": "Teaches small groups of engineers and contributes to Moonfrog's shared knowledge base",
       "signals": [
         "Avoids siloing information when it can be usefully shared with others",
         "Works to increase the bus factor of systems",
@@ -932,7 +932,7 @@ export const tracks: Tracks = {
       "examples": [
         "Gave a brown bag presentation on payments",
         "Wrote Hatch post on avoiding RDS backfill issues",
-        "Wrote Medium-U content module",
+        "Wrote Moonfrog-U content module",
       ],
     }, {
       "summary": "Encourages people to mentor each other, and creates ways for them to do so",
@@ -942,7 +942,7 @@ export const tracks: Tracks = {
         "Creates brown bag series and lines up speakers",
       ],
       "examples": [
-        "Created and lead Medium's Women in Eng group",
+        "Created and lead Moonfrog's Women in Eng group",
         "Organized an Eng All Hands with an outside speaker",
         "Designed and taught web client guild curriculum",
       ],
@@ -964,66 +964,66 @@ export const tracks: Tracks = {
   "EVANGELISM": {
     "displayName": "Evangelism",
     "category": "D",
-    "description": "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
+    "description": "Promotes Moonfrog to the outside world and establishes it as an attractive and thoughtful place to work",
     "milestones": [{
-      "summary": "Represents Medium well externally, and influences individuals positively",
+      "summary": "Represents Moonfrog well externally, and influences individuals positively",
       "signals": [
         "Shares personal and organizational successes with their network",
-        "Attends Medium-hosted events and talks with guests",
+        "Attends Moonfrog-hosted events and talks with guests",
         "Communicates genuine and honest excitement about their work externally",
       ],
       "examples": [
-        "Shared a Medium product launch post on Facebook",
+        "Shared a Moonfrog product launch post on Facebook",
         "Acted as a guide for a non-friend visitor to the office",
         "Supported PR efforts by giving a quote or having a photo taken",
       ],
     }, {
       "summary": "Participates more centrally in small events, and takes simple actions that positively influence groups of people",
       "signals": [
-        "Takes meaningful action to introduce people to Medium",
-        "Joined public Slack group and represented Medium appropriately, and well",
-        "Organizes positive small- or medium-sized events that bring people to Medium",
+        "Takes meaningful action to introduce people to Moonfrog",
+        "Joined public Slack group and represented Moonfrog appropriately, and well",
+        "Organizes positive small- or medium-sized events that bring people to Moonfrog",
       ],
       "examples": [
         "Volunteered as a helper for CODE2040 writing workshop",
         "Organized a short tour of the office by college students",
-        "Talked at a Women Who Code event hosted at Medium",
+        "Talked at a Women Who Code event hosted at Moonfrog",
       ],
     }, {
-      "summary": "Works hard to positively influence large groups of people on their views of Medium",
+      "summary": "Works hard to positively influence large groups of people on their views of Moonfrog",
       "signals": [
         "Mentors or participates in a high visibility way in an external organization",
         "Builds fruitful partnerships with external organizations",
-        "Writes blog posts about Medium that receive moderate traffic",
+        "Writes blog posts about Moonfrog that receive moderate traffic",
       ],
       "examples": [
-        "Represented Medium on a panel at a conference of industry experts",
+        "Represented Moonfrog on a panel at a conference of industry experts",
         "Established close ties with Creative Commons",
         "Built a durable, long-standing relationship with Code2040",
       ],
     }, {
-      "summary": "Establishes Medium as an great, innovative company and workplace to the whole industry",
+      "summary": "Establishes Moonfrog as an great, innovative company and workplace to the whole industry",
       "signals": [
         "Establishes themself as an industry thought leader who attracts talent",
-        "Publishes material about Medium's organizational or technical innovations",
-        "Leverages significant following to evangelise Medium",
+        "Publishes material about Moonfrog's organizational or technical innovations",
+        "Leverages significant following to evangelise Moonfrog",
       ],
       "examples": [
-        "Published a paper on Medium technology in a peer-reviewed journal",
+        "Published a paper on Moonfrog technology in a peer-reviewed journal",
         "Authored joint-press release with EFF on DNT",
-        "Published “Why Content Editable Is Terrible” on the Medium engineering blog",
+        "Published “Why Content Editable Is Terrible” on the Moonfrog engineering blog",
       ],
     }, {
-      "summary": "Introduces Medium in a positive light to a wider audience outside the industry",
+      "summary": "Introduces Moonfrog in a positive light to a wider audience outside the industry",
       "signals": [
         "Delivers key messages to broad, mainstream audiences",
-        "Influences people with large audiences to talk about Medium positively",
-        "Drives recognition and adoption of Medium in significant numbers",
+        "Influences people with large audiences to talk about Moonfrog positively",
+        "Drives recognition and adoption of Moonfrog in significant numbers",
       ],
       "examples": [
         "Published or interviewed in a mainstream newspaper or website outside tech",
         "Keynoted a conference with international attention",
-        "Represented Medium in national televised media",
+        "Represented Moonfrog in national televised media",
       ],
     }],
   },
@@ -1031,9 +1031,9 @@ export const tracks: Tracks = {
   "RECRUITING": {
     "displayName": "Recruiting",
     "category": "D",
-    "description": "Strengthens Medium's team by bringing in excellent staff members",
+    "description": "Strengthens Moonfrog's team by bringing in excellent staff members",
     "milestones": [{
-      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
+      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Moonfrog",
       "signals": [
         "Reviews existing network for hiring leads regularly",
         "Shadows interviews to gain familiarity with process",
@@ -1053,7 +1053,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Added observable evidence for every rating",
-        "Started a monthly brunch for candidates to meet Medium employees",
+        "Started a monthly brunch for candidates to meet Moonfrog employees",
         "Tested a new service for quality and diversity of candidates",
       ],
     }, {
@@ -1077,7 +1077,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Planned engineering summit on interview process and training",
-        "Organized and lead Medium's presence at a recruitment fair",
+        "Organized and lead Moonfrog's presence at a recruitment fair",
         "Started CODE2040 internship program",
       ],
     }, {
@@ -1151,7 +1151,7 @@ export const tracks: Tracks = {
       "summary": "Lives the company values, guards positive culture, and defines policies that support relatedness between teams",
       "signals": [
         "Brings separate teams together to build relatedness",
-        "Holds individuals, teams, and leadership accountable to Medium's values",
+        "Holds individuals, teams, and leadership accountable to Moonfrog's values",
         "Sets the tone, policy, and goals around maintaining an inclusive company",
       ],
       "examples": [
@@ -1191,15 +1191,16 @@ export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
   .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
+  .range(['#2ec732', '#baf55d', '#879a21', '#78f3cb'])
 
 export const titles = [
-  {label: 'Engineer I', minPoints: 0, maxPoints: 16},
-  {label: 'Engineer II', minPoints: 17, maxPoints: 35},
-  {label: 'Senior Engineer', minPoints: 36, maxPoints: 57},
-  {label: 'Group Lead', minPoints: 36, maxPoints: 57},
-  {label: 'Staff Engineer', minPoints: 58, maxPoints: 89},
-  {label: 'Senior Group Lead', minPoints: 58, maxPoints: 89},
-  {label: 'Principal Engineer', minPoints: 90},
+  {label: 'Associate Software Engineer', minPoints: 0, maxPoints: 16},
+  {label: 'Software Engineer', minPoints: 17, maxPoints: 35},
+  {label: 'Senior Software Engineer', minPoints: 36, maxPoints: 57},
+  {label: 'Tech Lead', minPoints: 36, maxPoints: 57},
+  {label: 'Principal Engineer', minPoints: 58, maxPoints: 89},
+  {label: 'Asso. Engineering Manager', minPoints: 58, maxPoints: 89},
+  {label: 'Engineering Manager', minPoints: 78},
   {label: 'Director of Engineering', minPoints: 90}
 ]
 
