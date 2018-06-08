@@ -1,8 +1,8 @@
 // @flow
 
 import React from 'react'
-import { trackIds, tracks, categoryColorScale } from '../constants'
-import type { MilestoneMap, TrackId } from '../constants'
+import { trackIds, tracks, categoryColorScale } from '../engineering-constants'
+import type { MilestoneMap, TrackId } from '../engineering-constants'
 
 type Props = {
   milestoneByTrack: MilestoneMap,
@@ -18,10 +18,7 @@ class TrackSelector extends React.Component<Props> {
           table {
             width: 100%;
             border-spacing: 3px;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-            margin-left: -3px;
+            padding-bottom: 10px;
           }
           .track-selector-value {
             line-height: 50px;

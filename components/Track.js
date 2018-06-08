@@ -1,8 +1,8 @@
 // @flow
 
-import { tracks, milestones, categoryColorScale } from '../constants'
+import { tracks, milestones, categoryColorScale } from '../engineering-constants'
 import React from 'react'
-import type { MilestoneMap, TrackId, Milestone } from '../constants'
+import type { MilestoneMap, TrackId, Milestone } from '../engineering-constants'
 
 type Props = {
   milestoneByTrack: MilestoneMap,
@@ -15,13 +15,16 @@ class Track extends React.Component<Props> {
     const track = tracks[this.props.trackId]
     const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
     const currentMilestone = track.milestones[currentMilestoneId - 1]
+	const colorToUse = categoryColorScale(track.category)
     return (
       <div className="track">
         <style jsx>{`
           div.track {
             margin: 0 0 20px 0;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #ccc;
+			padding:10px;
+			border: 1px solid ${colorToUse};
+            border-bottom: 2px solid ${colorToUse};
+            border-top: 4px solid ${colorToUse};
           }
           h2 {
             margin: 0 0 10px 0;
@@ -29,7 +32,7 @@ class Track extends React.Component<Props> {
           p.track-description {
             margin-top: 0;
             padding-bottom: 20px;
-            border-bottom: 2px solid #ccc;
+            border-bottom: 2px solid ${colorToUse};
           }
           table {
             border-spacing: 3px;

@@ -1,6 +1,6 @@
 // @flow
 
-import { pointsToLevels, milestoneToPoints, trackIds, totalPointsFromMilestoneMap } from '../constants'
+import { pointsToLevels, milestoneToPoints, trackIds, totalPointsFromMilestoneMap } from '../engineering-constants'
 import type { MilestoneMap } from '../constants'
 import React from 'react'
 
